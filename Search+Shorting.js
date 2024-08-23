@@ -43,4 +43,26 @@
 // Insertion_Short(array);
 // console.log(array)
 
+// Selection Short practice
+
+
+let array = [4,2,8,6,10,24,53,3];
+
+function insertion_Short(data){
+    for(i=0; i<data.length; i++){
+        let minIndex = i;
+        for(j=i+1; j<data.length; j++){
+            if(data[j]<data[minIndex]){
+                minIndex=j;
+            }
+        }
+        let temp = data[minIndex];
+        data[minIndex]=data[i];
+        data[i] = temp;
+    }
+}
+
+insertion_Short(array)
+console.log(array);
+
 
